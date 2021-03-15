@@ -15,6 +15,7 @@ The storefront of our bookstore is written in React. Using the following classes
  - Better decoupled methods: Separation of concerns for update methods. BooksTable class seems a bit large to me.
  - Update books without a page refresh: Currently adding a book will refresh the page. Would be faster to update book table class
  - Had CORS issues running in Chrome locally, had to install a plugin: https://www.moesif.com/?int_source=corsextension
+ - Testing: Simple tests included to make sure the components render. Would be better to unit test each method.
  
  ## API Gateway
 REST endpoints managed in AWS Gateway. Using a service link in AWS, maps requests/responses dealing with Dynamo DB calls. REST API details:
