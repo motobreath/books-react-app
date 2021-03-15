@@ -14,11 +14,17 @@ class BookTable extends React.Component {
         this.apiUrl = process.env.REACT_APP_BOOK_API_ROOT
         this.apiKey = process.env.REACT_APP_BOOK_API_KEY;
 
+        //figure out loading state, default to loading
+        let isLoading=props.isLoading;
+        if(typeof(props.isLoading)==="undefined"){
+            isLoading=true;
+        }
+        
         //state
         this.state = {
             books: props.books,
             hasBooks: props.books && props.books.length > 0 ? true : false,
-            isLoading: true,
+            isLoading: isLoading,
             checkoutLoading:[]
         }
         
